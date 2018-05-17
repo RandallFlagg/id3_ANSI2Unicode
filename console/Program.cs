@@ -3,15 +3,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using ID3Utils;
+using ID3Utils.Common;
 
-namespace ID3Utils
+namespace Program
 {
     class Program
     {
         public static void Main(string[] args)
         {
+            var out1 = Output.Factory(OutputOptions.Console);//TODO: Check why the name out gives an error during compile
+            out1.WriteLine("Start Argumnts Proccessing!");
             int exitCode = -1;
-            Console.WriteLine("Start Argumnts Proccessing!");
             var parser =
            //  new Parser(with => {
            //     with.EnableDashDash = false;
@@ -21,25 +24,30 @@ namespace ID3Utils
             result
                 .WithParsed<CommandLineOptions>(options =>
                 {
-                    var values = ((IList<object>)options.StringSeq).Count;
-                    if (values > 0)
+                    if (options.StringSeq is IList<object>)
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("All values are ignored. Please use only the options (-, --).");
+                        var values = (options.StringSeq as IList<object>).Count;
+                        if (values > 0)
+                        {
+                            out1.WriteLine("All values are ignored. Please use only the options (-, --).", Severity.Warning);
+                        }
                     }
-                    Console.WriteLine("Start Converting!");
-                    IID3Converter converter = new ID3SharpConverter();
+
+                    out1.WriteLine("Start Converting!");
+                    IID3Converter converter = new ID3Converter();
                     //IID3Converter converterBAD = new ID3DotNetConverter();
 
                     var configuration = (path: options.Path.Trim(), ext: options.Extension.Trim(), searchOption: options.Recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly);
                     if (converter.Init(configuration))
                     {
-                        Console.WriteLine("Before:");
+                        out1.WriteLine("Before:");
+                        //Path.Combine(path, "WriteLines.txt");
                         //converter.PrintTag();
-                        converter.Execute();
-                        Console.WriteLine("After:");
+                        converter.Execute<TagSharp>();
+                        //converter.Execute<TagDotNet>();
+                        out1.WriteLine("After:");
                         //converter.PrintTag();
-                        Console.WriteLine("Done Converting!");
+                        out1.WriteLine("Done Converting!");
                         exitCode = 0;
                     }
                 })
@@ -47,12 +55,12 @@ namespace ID3Utils
                 {
                     foreach (Error e in errs)
                     {
-                        //Console.WriteLine("Repeated Option Error: {0}", e.NameInfo);
+                        //out1.WriteLine("Repeated Option Error: {0}", e.NameInfo);
                         exitCode = (int)e.Tag;
                     }
                 });
 
-            Console.WriteLine("Done Argumnts Proccessing!");
+            out1.WriteLine("Done Argumnts Proccessing!");
             Environment.Exit(exitCode);
         }
     }

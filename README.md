@@ -8,9 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)<!-- [![Known Vulnerabilities](https://snyk.io/test/github/RandallFlagg/id3_ANSI2Unicode/badge.svg)](https://snyk.io/test/github/RandallFlagg/id3_ANSI2Unicode) -->
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 ![subject-music-data id3](https://img.shields.io/badge/Subject-Music%2Fid3-8A2BE2.svg)
+[![Build status](https://ci.appveyor.com/api/projects/status/gs5f2a4xavxvgtxc/branch/master?svg=true)](https://ci.appveyor.com/project/RandallFlagg/id3-ansi2unicode/branch/master)
 
-<!-- [![Build status](https://ci.appveyor.com/api/projects/status/4h6xnd2cvjpf93of?svg=true)](https://ci.appveyor.com/project/RandallFlagg/id3-ansi2unicode)
-
+<!--
 [![Build Status](https://travis-ci.org/RandallFlagg/id3-ansi2unicode.svg?branch=staging)](https://travis-ci.org/RandallFlagg/id3-ansi2unicode)
 
 [![NuGet Badge](https://buildstats.info/nuget/CommandLineArgumentsParser)](https://www.nuget.org/packages/CommandLineArgumentsParser) -->

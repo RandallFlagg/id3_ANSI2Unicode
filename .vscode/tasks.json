@@ -43,7 +43,7 @@
             "type": "shell",
             "group": {
                 "kind":"build",
-                "isDefault": true
+                "isDefault": false
             },
             "presentation": {
                 "reveal": "silent"

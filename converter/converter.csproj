@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <!-- <Configuration>Release</Configuration> -->
   </PropertyGroup>
@@ -9,11 +9,12 @@
     <PackageReference Include="ID3.Files-DotNetCore" Version="*"/>
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0"/>
     <!-- <PackageReference Include="System.ValueTuple" Version="*"/> -->
-    <PackageReference Include="CommandLineParser" Version="*"/>
+    <!-- <PackageReference Include="CommandLineParser" Version="*"/> -->
     <!-- <PackageReference Include="CommandLineArgumentsParser" Version="*"/> -->
   </ItemGroup>
   <ItemGroup>
-  <ProjectReference Include="../IdSharp-DotNetCore/IdSharp.Tagging/IdSharp.Tagging-core.csproj" />
+  <ProjectReference Include="../../IdSharp-DotNetCore/IdSharp.Tagging/IdSharp.Tagging-core.csproj" />
+  <ProjectReference Include="../common/common.csproj" />
   <!-- <ProjectReference Include="D:\Ohad\ID3\id3-DotNetCore\Id3.Net\Id3.csproj" />
   <ProjectReference Include="D:\Ohad\ID3\id3-DotNetCore\Id3.Net.Files\Id3.Files.csproj" /> -->
  </ItemGroup>

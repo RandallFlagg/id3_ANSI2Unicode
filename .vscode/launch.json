@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/Converter.dll",
+            "program": "${workspaceFolder}/console/bin/Debug/netcoreapp2.0/console.dll",
             //"args": ["AAA", "-p D:\\Ohad\\mp3 ID3 tag convert\\Data", "-e *.mp3", "BBBB"],
             "args": ["-p D:\\Ohad\\ID3\\mp3 ID3 tag convert\\Data", "-e *.mp3", "-r"],
             //,"-A a", "-B b bb", "C c"],
@@ -18,14 +18,13 @@
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            
         },
         {
             "name": "Release - .NET Core Launch (console)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build_release",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.0/Converter.dll",
+            "program": "${workspaceFolder}/console/bin/Debug/netcoreapp2.0/console.dll",
             //"args": ["AAA", "-p D:\\Ohad\\mp3 ID3 tag convert\\Data", "-e *.mp3", "BBBB"],
             "args": ["-p D:\\Ohad\\ID3\\mp3 ID3 tag convert\\Data", "-e *.mp3", "-r"],
             //,"-A a", "-B b bb", "C c"],
@@ -34,7 +33,6 @@
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            
         }
         // {
         //     "name": ".NET Core Launch (web)",
