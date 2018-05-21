@@ -5,9 +5,9 @@ using System.Text;
 using System.Linq;
 using System.Globalization;
 
-namespace ID3Utils
+namespace ID3Utils.Common
 {
-    static class LangEncoding
+    public static class LangEncoding
     {
         public static readonly Encoding ANSI;
         public static readonly Encoding ASCIIEncoding;//ISO_8859_1

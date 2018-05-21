@@ -14,6 +14,9 @@ namespace ID3Utils
 
         public ID3Converter(IOutput output = null)
         {
+            if(output == null){
+                output = Output.Factory(OutputOptions.Null);
+            }
             _output = output;
         }
 

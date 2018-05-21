@@ -14,6 +14,9 @@
   </ItemGroup>
   <ItemGroup>
   <!-- <ProjectReference Include="../IdSharp-DotNetCore/IdSharp.Tagging/IdSharp.Tagging-core.csproj" /> -->
+    <ProjectReference Include="../converters/TagSharp/TagSharp.csproj" />
+    <ProjectReference Include="../converters/TagDotNet/TagDotNet.csproj" />
+    <ProjectReference Include="../converters/TagID3/TagID3.csproj" />
   <!-- <ProjectReference Include="D:\Ohad\ID3\id3-DotNetCore\Id3.Net\Id3.csproj" /> -->
   <ProjectReference Include="../common/common.csproj" />
   <ProjectReference Include="../converter/converter.csproj" />

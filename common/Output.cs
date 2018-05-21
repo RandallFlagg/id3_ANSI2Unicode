@@ -15,6 +15,9 @@ namespace ID3Utils.Common
                 case OutputOptions.File:
                     result = new OutputFile();
                     break;
+                case OutputOptions.Null:
+                    result = new OutputNull();
+                    break;
                 default:
                     throw new NotImplementedException($"output: {output}");
             }

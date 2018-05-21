@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <!-- <Configuration>Release</Configuration> -->
   </PropertyGroup>
   <ItemGroup>
     <!-- <PackageReference Include="ID3.Net-DotNetCore" Version="*"/> -->
     <!-- <PackageReference Include="ID3.Files-DotNetCore" Version="*"/> -->
-    <!-- <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0"/> -->
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.4.0"/>
     <!-- <PackageReference Include="System.ValueTuple" Version="*"/> -->
     <!-- <PackageReference Include="CommandLineParser" Version="*"/> -->
     <!-- <PackageReference Include="CommandLineArgumentsParser" Version="*"/> -->

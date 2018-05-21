@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ID3Utils
+namespace ID3Utils.Common
 {
     public static class LangUtil
     {
